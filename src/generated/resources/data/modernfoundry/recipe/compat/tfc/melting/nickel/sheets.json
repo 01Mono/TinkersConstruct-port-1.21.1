@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:sheets/nickel"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:sheets/nickel"
+  },
+  "result": {
+    "amount": 180,
+    "tag": "c:molten_nickel"
+  },
+  "temperature": 700,
+  "time": 80
+}

@@ -2,7 +2,7 @@
   "type": "modernfoundry:casting_basin",
   "id": "modernfoundry:smeltery/casting/amethyst/glass",
   "cast": {
-    "tag": "c:glass/colorless"
+    "tag": "c:glass_blocks/colorless"
   },
   "cast_consumed": true,
   "cooling_time": 97,

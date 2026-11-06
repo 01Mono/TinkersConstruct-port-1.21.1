@@ -1,0 +1,25 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:ingots/invar"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:ingots/invar"
+    }
+  ],
+  "results": [
+    {
+      "amount": 90,
+      "id": "modernfoundry:molten_invar"
+    }
+  ]
+}

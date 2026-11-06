@@ -24,6 +24,7 @@ import modernmods.modernfoundry.library.modifiers.ModifierHooks;
 import modernmods.modernfoundry.library.modifiers.fluid.FluidEffectContext;
 import modernmods.modernfoundry.library.modifiers.fluid.FluidEffectManager;
 import modernmods.modernfoundry.library.modifiers.fluid.FluidEffects;
+import modernmods.modernfoundry.library.modifiers.fluid.entity.RestoreHungerFluidEffect;
 import modernmods.modernfoundry.library.modifiers.hook.armor.EquipmentChangeModifierHook;
 import modernmods.modernfoundry.library.modifiers.hook.interaction.GeneralInteractionModifierHook;
 import modernmods.modernfoundry.library.modifiers.hook.interaction.InteractionSource;
@@ -49,6 +50,8 @@ import static modernmods.modernfoundry.library.tools.helper.ModifierUtil.consume
 /** Modifier that after a short time applies a fluid effect to the holder. */
 public record SlurpingModule(LevelingValue strength, LevelingInt duration) implements ModifierModule, GeneralInteractionModifierHook, UsingToolModifierHook, KeybindInteractModifierHook, InventoryTickModifierHook, EquipmentChangeModifierHook {
   private static final float DEGREE_TO_RADIANS = (float)Math.PI / 180F;
+  /** Ticks before a fluid that is not food can be slurped again */
+  private static final int NON_FOOD_COOLDOWN = 40;
   private static final List<ModuleHook<?>> DEFAULT_HOOKS = HookProvider.<SlurpingModule>defaultHooks(ModifierHooks.GENERAL_INTERACT, ModifierHooks.TOOL_USING, ModifierHooks.ARMOR_INTERACT, ModifierHooks.INVENTORY_TICK, ModifierHooks.EQUIPMENT_CHANGE);
   public static final RecordLoadable<SlurpingModule> LOADER = RecordLoadable.create(
     LevelingValue.LOADABLE.requiredField("strength", SlurpingModule::strength),
@@ -76,6 +79,11 @@ public record SlurpingModule(LevelingValue strength, LevelingInt duration) imple
     return 0;
   }
 
+  /** Checks if the given fluid restores hunger */
+  private static boolean isFood(FluidStack fluid) {
+    return FluidEffectManager.INSTANCE.find(fluid.getFluid()).entityEffects().stream().anyMatch(effect -> effect instanceof RestoreHungerFluidEffect);
+  }
+
   /** Drinks some of the fluid in the tank, reducing its value and spawning particles and playing sounds */
   private void finishDrinking(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, boolean playSound) {
     FluidStack fluid = TANK_HELPER.getFluid(tool);
@@ -88,7 +96,11 @@ public record SlurpingModule(LevelingValue strength, LevelingInt duration) imple
       // apply effect
       if (!entity.level().isClientSide) {
         Player player = asPlayer(entity);
+        boolean food = isFood(fluid);
         int consumed = slurp(fluid, modifier, entity, player, FluidAction.EXECUTE);
+        if (consumed > 0 && !food && player != null) {
+          player.getCooldowns().addCooldown(tool.getItem(), NON_FOOD_COOLDOWN);
+        }
         if (consumed > 0 && consumesResources(player)) {
           fluid.shrink(consumed);
           TANK_HELPER.setFluid(tool, fluid);
@@ -123,7 +135,7 @@ public record SlurpingModule(LevelingValue strength, LevelingInt duration) imple
 
   @Override
   public InteractionResult onToolUse(IToolStackView tool, ModifierEntry modifier, Player player, InteractionHand hand, InteractionSource source) {
-    if (source == InteractionSource.RIGHT_CLICK) {
+    if (source == InteractionSource.RIGHT_CLICK && !player.getCooldowns().isOnCooldown(tool.getItem())) {
       if (slurp(TANK_HELPER.getFluid(tool), modifier, player, player, FluidAction.SIMULATE) > 0) {
         GeneralInteractionModifierHook.startUsing(tool, modifier.getId(), player, hand);
         return InteractionResult.CONSUME;
@@ -186,7 +198,7 @@ public record SlurpingModule(LevelingValue strength, LevelingInt duration) imple
 
   @Override
   public boolean startInteract(IToolStackView tool, ModifierEntry modifier, Player player, EquipmentSlot slot, TooltipKey keyModifier) {
-    if (keyModifier == TooltipKey.NORMAL) {
+    if (keyModifier == TooltipKey.NORMAL && !player.getCooldowns().isOnCooldown(tool.getItem())) {
       if (slurp(TANK_HELPER.getFluid(tool), modifier, player, player, FluidAction.SIMULATE) > 0) {
         tool.getPersistentData().putInt(modifier.getId(), player.tickCount + duration.compute(modifier.getEffectiveLevel()));
         return true;

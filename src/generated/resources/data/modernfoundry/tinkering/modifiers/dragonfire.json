@@ -1,0 +1,9 @@
+{
+  "condition": {"type": "neoforge:mod_loaded", "modid": "iceandfire"},
+  "level_display": "modernfoundry:no_levels",
+  "modules": [
+    {"type": "modernfoundry:fiery_attack", "seconds": {"flat": 15.0}},
+    {"type": "modernfoundry:autosmelt", "extra_drop_chance": 0.0, "recipe_types": "minecraft:smelting"},
+    {"type": "modernfoundry:attribute", "attribute": "minecraft:generic.attack_knockback", "flat": 1.0, "operation": "addition", "slots": ["mainhand"]}
+  ]
+}

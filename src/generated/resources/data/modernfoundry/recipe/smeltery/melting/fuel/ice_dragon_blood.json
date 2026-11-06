@@ -1,0 +1,11 @@
+{
+  "type": "modernfoundry:melting_fuel",
+  "id": "modernfoundry:smeltery/melting/fuel/ice_dragon_blood",
+  "duration": 200,
+  "fluid": {
+    "amount": 50,
+    "fluid": "modernfoundry:ice_dragon_blood"
+  },
+  "rate": 20,
+  "temperature": 2500
+}

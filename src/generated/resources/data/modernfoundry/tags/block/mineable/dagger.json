@@ -2,7 +2,7 @@
   "values": [
     "#minecraft:mineable/hoe",
     "#c:mineable/sword",
-    "#c:glass",
+    "#c:glass_blocks",
     "#c:glass_panes",
     "minecraft:glowstone",
     "minecraft:redstone_lamp",

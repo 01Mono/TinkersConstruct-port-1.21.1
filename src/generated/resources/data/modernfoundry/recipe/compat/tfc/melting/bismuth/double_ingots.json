@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:double_ingots/bismuth"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:double_ingots/bismuth"
+  },
+  "result": {
+    "amount": 200,
+    "fluid": "tfc:metal/bismuth"
+  },
+  "temperature": 300,
+  "time": 80
+}

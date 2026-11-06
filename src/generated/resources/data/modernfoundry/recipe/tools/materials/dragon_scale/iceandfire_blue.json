@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/dragon_scale/iceandfire_blue",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonscales_blue"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonscales_blue"
+  },
+  "material": "modernfoundry:dragon_scale",
+  "needed": 1,
+  "value": 1
+}

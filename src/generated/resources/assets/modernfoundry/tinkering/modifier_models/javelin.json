@@ -8,10 +8,6 @@
       "texture": "modernfoundry:item/tool/javelin/modifiers/modernfoundry_bane_of_sssss",
       "texture_large": "modernfoundry:item/tool/javelin/large/modifiers/modernfoundry_bane_of_sssss"
     },
-    "modernfoundry:blasting": {
-      "texture": "modernfoundry:item/tool/javelin/modifiers/modernfoundry_blasting",
-      "texture_large": "modernfoundry:item/tool/javelin/large/modifiers/modernfoundry_blasting"
-    },
     "modernfoundry:bucketing": [
       {
         "type": "modernfoundry:fluid",
@@ -76,11 +72,9 @@
       "texture_large": "modernfoundry:item/tool/javelin/large/modifiers/modernfoundry_netherite"
     },
     "modernfoundry:overforced": {
-      "texture": "modernfoundry:item/tool/javelin/modifiers/modernfoundry_overforced",
       "texture_large": "modernfoundry:item/tool/javelin/large/modifiers/modernfoundry_overforced"
     },
     "modernfoundry:reinforced": {
-      "texture": "modernfoundry:item/tool/javelin/modifiers/modernfoundry_reinforced",
       "texture_large": "modernfoundry:item/tool/javelin/large/modifiers/modernfoundry_reinforced"
     },
     "modernfoundry:sharpness": {
@@ -111,7 +105,6 @@
     ],
     "modernfoundry:unbreakable": {
       "luminosity": 2,
-      "texture": "modernfoundry:item/tool/javelin/modifiers/modernfoundry_unbreakable",
       "texture_large": "modernfoundry:item/tool/javelin/large/modifiers/modernfoundry_unbreakable"
     }
   }

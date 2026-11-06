@@ -1,0 +1,18 @@
+{
+  "type": "modernfoundry:casting_basin",
+  "id": "modernfoundry:smeltery/casting/fire_dragonsteel/block",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonsteel_fire_block"
+    }
+  ],
+  "cooling_time": 270,
+  "fluid": {
+    "amount": 810,
+    "fluid": "modernfoundry:molten_fire_dragonsteel"
+  },
+  "result": {
+    "item": "iceandfire:dragonsteel_fire_block"
+  }
+}

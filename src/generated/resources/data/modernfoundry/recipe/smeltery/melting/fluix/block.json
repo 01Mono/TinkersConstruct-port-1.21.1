@@ -1,0 +1,19 @@
+{
+  "type": "modernfoundry:melting",
+  "id": "modernfoundry:smeltery/melting/fluix/block",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:fluix_block"
+    }
+  ],
+  "ingredient": {
+    "item": "ae2:fluix_block"
+  },
+  "result": {
+    "amount": 400,
+    "fluid": "modernfoundry:molten_fluix"
+  },
+  "temperature": 1100,
+  "time": 120
+}

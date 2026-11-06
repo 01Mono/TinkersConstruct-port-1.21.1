@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "G": {
-      "tag": "c:glass/colorless"
+      "tag": "c:glass_blocks/colorless"
     },
     "b": {
       "item": "modernfoundry:seared_brick"

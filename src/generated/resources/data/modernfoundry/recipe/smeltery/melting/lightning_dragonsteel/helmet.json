@@ -1,0 +1,20 @@
+{
+  "type": "modernfoundry:damagable_melting",
+  "id": "modernfoundry:smeltery/melting/lightning_dragonsteel/helmet",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonsteel_lightning_helmet"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonsteel_lightning_helmet"
+  },
+  "result": {
+    "amount": 450,
+    "fluid": "modernfoundry:molten_lightning_dragonsteel",
+    "unit_size": 90
+  },
+  "temperature": 2000,
+  "time": 160
+}

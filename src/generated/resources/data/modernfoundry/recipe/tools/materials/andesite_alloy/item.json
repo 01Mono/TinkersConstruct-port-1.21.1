@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/andesite_alloy/item",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "ingredient": {
+    "item": "create:andesite_alloy"
+  },
+  "material": "modernfoundry:andesite_alloy",
+  "needed": 1,
+  "value": 1
+}

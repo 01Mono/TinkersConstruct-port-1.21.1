@@ -1,0 +1,32 @@
+{
+  "type": "modernfoundry:alloy",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    }
+  ],
+  "inputs": [
+    {
+      "amount": 10,
+      "fluid": "tfc:metal/brass"
+    },
+    {
+      "amount": 10,
+      "fluid": "tfc:metal/rose_gold"
+    },
+    {
+      "amount": 50,
+      "fluid": "tfc:metal/black_steel"
+    },
+    {
+      "amount": 30,
+      "fluid": "tfc:metal/steel"
+    }
+  ],
+  "result": {
+    "amount": 100,
+    "fluid": "tfc:metal/red_steel"
+  },
+  "temperature": 1400
+}

@@ -60,7 +60,9 @@ public class CopperCanItem extends Item {
     if (fluid != Fluids.EMPTY) {
       CompoundTag fluidTag = getFluidTag(stack);
       MutableComponent text;
-      if (fluidTag != null) {
+      if (!TankItem.hasFluidType(fluid)) {
+        text = Component.literal(Loadables.FLUID.getKey(fluid).toString());
+      } else if (fluidTag != null) {
         FluidStack displayFluid = TagUtil.createFluidStack(fluid, FluidValues.INGOT, fluidTag);
         text = displayFluid.getDisplayName().plainCopy();
       } else {

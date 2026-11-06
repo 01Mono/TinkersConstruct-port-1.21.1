@@ -3,16 +3,6 @@
     "modernfoundry:antiaquatic": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_antiaquatic",
     "modernfoundry:bane_of_sssss": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_bane_of_sssss",
     "modernfoundry:blasting": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_blasting",
-    "modernfoundry:bucketing": [
-      {
-        "type": "modernfoundry:fluid",
-        "mask": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_bucketing_full"
-      },
-      {
-        "type": "modernfoundry:basic",
-        "texture": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_bucketing"
-      }
-    ],
     "modernfoundry:cooling": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_cooling",
     "modernfoundry:emerald": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_emerald",
     "modernfoundry:experienced": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_experienced",
@@ -20,20 +10,8 @@
       "luminosity": 10,
       "texture": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_fiery"
     },
-    "modernfoundry:glowing": {
-      "luminosity": 15,
-      "texture": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_glowing"
-    },
-    "modernfoundry:haste": {
-      "luminosity": 7,
-      "texture": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_haste"
-    },
     "modernfoundry:hydraulic": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_hydraulic",
     "modernfoundry:knockback": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_knockback",
-    "modernfoundry:lightspeed": {
-      "luminosity": 15,
-      "texture": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_lightspeed"
-    },
     "modernfoundry:luck": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_luck",
     "modernfoundry:magnetic": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_magnetic",
     "modernfoundry:necrotic": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_necrotic",
@@ -48,15 +26,7 @@
         "type": "modernfoundry:tank",
         "full": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_tank_full",
         "partial": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_tank_partial"
-      },
-      {
-        "type": "modernfoundry:basic",
-        "texture": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_tank"
       }
-    ],
-    "modernfoundry:unbreakable": {
-      "luminosity": 2,
-      "texture": "modernfoundry:item/tool/pickadze/modifiers/modernfoundry_unbreakable"
-    }
+    ]
   }
 }

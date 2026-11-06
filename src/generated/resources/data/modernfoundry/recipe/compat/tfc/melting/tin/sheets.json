@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:sheets/tin"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:sheets/tin"
+  },
+  "result": {
+    "amount": 180,
+    "tag": "c:molten_tin"
+  },
+  "temperature": 700,
+  "time": 80
+}

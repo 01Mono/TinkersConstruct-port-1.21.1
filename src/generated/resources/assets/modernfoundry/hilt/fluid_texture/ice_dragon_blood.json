@@ -1,0 +1,13 @@
+{
+  "camera": "modernfoundry:fluid/dragon_blood/ice/camera",
+  "camera_opacity": 0.1,
+  "color": "FFFFFFFF",
+  "flowing": "modernfoundry:fluid/dragon_blood/ice/flowing",
+  "fog": {
+    "calculate_color": true,
+    "end": 2,
+    "shape": "sphere",
+    "start": 0.25
+  },
+  "still": "modernfoundry:fluid/dragon_blood/ice/still"
+}

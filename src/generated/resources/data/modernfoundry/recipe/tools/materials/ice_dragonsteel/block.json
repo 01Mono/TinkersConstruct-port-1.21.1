@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/ice_dragonsteel/block",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonsteel_ice_block"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonsteel_ice_block"
+  },
+  "material": "modernfoundry:ice_dragonsteel",
+  "needed": 1,
+  "value": 9
+}

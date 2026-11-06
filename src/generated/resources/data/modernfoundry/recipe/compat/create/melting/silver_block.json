@@ -1,0 +1,25 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:storage_blocks/silver"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:storage_blocks/silver"
+    }
+  ],
+  "results": [
+    {
+      "amount": 810,
+      "id": "modernfoundry:molten_silver"
+    }
+  ]
+}

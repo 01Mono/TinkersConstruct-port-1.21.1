@@ -1,0 +1,20 @@
+{
+  "type": "modernfoundry:damagable_melting",
+  "id": "modernfoundry:smeltery/melting/lightning_dragonsteel/pickaxe",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonsteel_lightning_pickaxe"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonsteel_lightning_pickaxe"
+  },
+  "result": {
+    "amount": 270,
+    "fluid": "modernfoundry:molten_lightning_dragonsteel",
+    "unit_size": 90
+  },
+  "temperature": 2000,
+  "time": 120
+}

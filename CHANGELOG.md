@@ -1,3 +1,42 @@
+# 1.6.2
+* Fixed tools and armor with a tank not exposing their fluid: they can now exchange fluid with tanks and other fluid storage by right-clicking, and with each other in the inventory.
+* Slurping a fluid that is not food now puts the tool on a 2 second cooldown.
+* Fixed fluid particles rendering a large part of the block texture atlas instead of the fluid.
+* Fixed filled tanks dropping as an item that looked empty.
+* Fixed the smeltery continuing to use the fuel of a tank that was replaced.
+* Fixed the Stoneshield trait never triggering, as its item tag used outdated names and failed to load.
+* Fixed a large purple and black square replacing a held tool when a modifier had no matching texture, and added the Luck texture to the large Cleaver.
+* Fixed a crash in the creative search when another mod registers a fluid without a fluid type.
+* Fixed the smeltery burning fuel from a tank that was broken and replaced.
+* Added experimental Ponder tutorials when Create is installed: Melter, casting, Smeltery and Alloyer, plus Create, Applied Energistics 2 and Ice and Fire scenes that only load with those mods.
+
+# 1.6.1
+* Rebalanced the Fire, Ice and Lightning Dragonsteel materials, which were far too strong once Tinkers' tool multipliers applied (a cleaver reached 45 attack damage).
+    * Head durability lowered from 8000 to 1600, attack from 24 to 4.5 and mining speed from 10 to 9, making them slightly stronger than Manyullyn.
+* Fixed missing English names for the Dragonsteel materials, dragon blood fluids and molten Certus Quartz and Fluix, which showed as raw translation keys.
+
+# 1.6.0
+* Added Ice and Fire compatibility.
+    * Added Fire, Ice and Lightning Dragonsteel tool and armor materials with Ice and Fire's stats (netherite tier), cast from their molten fluids.
+    * Added the Dragonfire, Dragonfrost and Dragonstorm modifiers: Dragonfire ignites targets for 15 seconds, knocks them back and smelts mined blocks; Dragonfrost freezes targets in Ice and Fire ice for 15 seconds with Slowness and Mining Fatigue; Dragonstorm strikes targets with lightning on fully charged hits.
+    * Added fire, ice and lightning dragon blood fluids as high-temperature smeltery fuels.
+* Added Applied Energistics 2 compatibility: Certus Quartz, Fluix and Sky Stone tool materials, plus molten Certus Quartz and Fluix.
+* Added Create materials and machine compatibility.
+    * Added Brass, Zinc, Andesite Alloy and Rose Quartz tool and armor materials.
+    * The Create heated or superheated mixer can now melt ingots, nuggets and blocks into molten metals, mix alloys (brass, bronze, electrum, constantan, invar, rose gold, pewter, steel, amethyst bronze), and fire grout into seared and scorched bricks.
+    * The Create compactor can now turn 90 mB of molten metal into ingots.
+* Added TerraFirmaCraft compatibility.
+    * Bismuth, bismuth bronze, black bronze, sterling silver, wrought iron, cast iron, black steel, red steel and blue steel ingots, double ingots, sheets, double sheets and rods melt into TFC's own metal fluids at TFC's ratios, and those fluids cast back into TFC ingots.
+    * The smeltery can mix TFC's alloys: bismuth bronze, black bronze, sterling silver, black steel, red steel and blue steel.
+    * TFC double ingots, sheets and rods of shared metals melt into Modern Foundry's molten metals.
+    * Added Bismuth Bronze, Black Bronze, Sterling Silver, Wrought Iron, Black Steel, Red Steel and Blue Steel tool and armor materials.
+* Fixed being unable to join servers: modifier sync no longer disconnects clients when the enchantment registry is not yet available.
+* Fixed a crash when creating a world with TerraFirmaCraft, caused by recipe outputs being queried before Hilt's tag preferences loaded.
+* Fixed recipes using soul glass instead of normal glass: common tags now use NeoForge 1.21.1 names (`c:glass_blocks`, `c:glass_panes`, `c:sands`).
+* Fixed the sand cast recipe being uncraftable.
+* Fixed Tinkers tools not turning trees into Tree Physics / Sable objects in survival; harvesting now fires the block break event.
+* Fixed the Seared Heater not dropping its fuel when broken.
+
 # 1.5.0
 * Synced with the latest official Tinkers' Construct 1.20.1 changes.
     * Added fancy armor stands (bamboo, bone, necrotic bone, clear), the horn material, the phantom cuirass and the reworked Gold Guard and Chrysophilite.

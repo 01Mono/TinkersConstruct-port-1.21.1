@@ -1,0 +1,10 @@
+{
+  "condition": {
+    "type": "neoforge:mod_loaded",
+    "modid": "ae2"
+  },
+  "craftable": false,
+  "hidden": false,
+  "sortOrder": 60,
+  "tier": 2
+}

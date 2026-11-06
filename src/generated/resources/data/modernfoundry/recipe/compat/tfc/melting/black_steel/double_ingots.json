@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:double_ingots/black_steel"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:double_ingots/black_steel"
+  },
+  "result": {
+    "amount": 200,
+    "fluid": "tfc:metal/black_steel"
+  },
+  "temperature": 1200,
+  "time": 80
+}

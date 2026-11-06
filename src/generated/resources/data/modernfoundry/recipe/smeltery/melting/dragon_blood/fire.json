@@ -1,0 +1,19 @@
+{
+  "type": "modernfoundry:melting",
+  "id": "modernfoundry:smeltery/melting/dragon_blood/fire",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:fire_dragon_blood"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:fire_dragon_blood"
+  },
+  "result": {
+    "amount": 250,
+    "fluid": "modernfoundry:fire_dragon_blood"
+  },
+  "temperature": 300,
+  "time": 30
+}

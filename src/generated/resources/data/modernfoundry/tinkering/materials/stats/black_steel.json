@@ -1,0 +1,52 @@
+{
+  "stats": {
+    "modernfoundry:binding": {},
+    "modernfoundry:grip": {
+      "accuracy": 0,
+      "durability": 0.05,
+      "melee_damage": 3.5
+    },
+    "modernfoundry:handle": {
+      "durability": 0.05,
+      "melee_damage": 0.05,
+      "melee_speed": 0.05,
+      "mining_speed": 0.05
+    },
+    "modernfoundry:head": {
+      "durability": 1400,
+      "melee_attack": 3.5,
+      "mining_speed": 9,
+      "mining_tier": "minecraft:diamond"
+    },
+    "modernfoundry:limb": {
+      "accuracy": 0.05,
+      "draw_speed": 0,
+      "durability": 1400,
+      "velocity": 0.05
+    },
+    "modernfoundry:maille": {},
+    "modernfoundry:plating_boots": {
+      "armor": 3,
+      "durability": 429,
+      "toughness": 2
+    },
+    "modernfoundry:plating_chestplate": {
+      "armor": 7.5,
+      "durability": 528,
+      "toughness": 2
+    },
+    "modernfoundry:plating_helmet": {
+      "armor": 3,
+      "durability": 363,
+      "toughness": 2
+    },
+    "modernfoundry:plating_leggings": {
+      "armor": 6,
+      "durability": 495,
+      "toughness": 2
+    },
+    "modernfoundry:plating_shield": {
+      "durability": 594
+    }
+  }
+}

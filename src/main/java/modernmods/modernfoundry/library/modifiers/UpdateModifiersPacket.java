@@ -5,7 +5,6 @@ import com.google.common.collect.ImmutableMap;
 import io.netty.handler.codec.DecoderException;
 import io.netty.handler.codec.EncoderException;
 import lombok.RequiredArgsConstructor;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.FriendlyByteBuf;
@@ -39,6 +38,7 @@ public class UpdateModifiersPacket implements IThreadsafePacket {
   private Map<ModifierId,ModifierId> redirects;
   /** Map of enchantment to modifier pair */
   private final Map<Enchantment,Modifier> enchantmentMap;
+  private Map<ResourceLocation,Modifier> pendingEnchantments;
   /** Collection of all enchantment tag mappings */
   private final Map<TagKey<Enchantment>, Modifier> enchantmentTagMappings;
 
@@ -88,9 +88,16 @@ public class UpdateModifiersPacket implements IThreadsafePacket {
     return lookup;
   }
 
-  /** Looks up an enchantment by ID. */
-  private static Enchantment getEnchantment(ResourceLocation id) {
-    return enchantmentLookup().get(ResourceKey.create(Registries.ENCHANTMENT, id)).map(Holder::value).orElseThrow(() -> new DecoderException("Unknown enchantment " + id));
+  private static Map<Enchantment,Modifier> resolveEnchantments(Map<ResourceLocation,Modifier> pending) {
+    HolderLookup.RegistryLookup<Enchantment> lookup = CommonHooks.resolveLookup(Registries.ENCHANTMENT);
+    if (lookup == null) {
+      return Map.of();
+    }
+    ImmutableMap.Builder<Enchantment,Modifier> builder = ImmutableMap.builder();
+    for (Entry<ResourceLocation,Modifier> entry : pending.entrySet()) {
+      lookup.get(ResourceKey.create(Registries.ENCHANTMENT, entry.getKey())).ifPresent(holder -> builder.put(holder.value(), entry.getValue()));
+    }
+    return builder.buildKeepingLast();
   }
 
   /** Gets the ID for the given enchantment. */
@@ -123,14 +130,14 @@ public class UpdateModifiersPacket implements IThreadsafePacket {
     this.tags = GenericTagUtil.decodeTags(buffer, ModifierManager.REGISTRY_KEY, id -> getModifier(modifiers, new ModifierId(id)));
 
     // read in enchantment to modifier mapping
-    ImmutableMap.Builder<Enchantment,Modifier> enchantmentBuilder = ImmutableMap.builder();
+    Map<ResourceLocation,Modifier> pending = new HashMap<>();
     size = buffer.readVarInt();
     for (int i = 0; i < size; i++) {
-      enchantmentBuilder.put(
-        getEnchantment(buffer.readResourceLocation()),
-        getModifier(modifiers, new ModifierId(buffer.readResourceLocation())));
+      ResourceLocation enchantment = buffer.readResourceLocation();
+      pending.put(enchantment, getModifier(modifiers, new ModifierId(buffer.readResourceLocation())));
     }
-    enchantmentMap = enchantmentBuilder.build();
+    pendingEnchantments = pending;
+    enchantmentMap = Map.of();
     ImmutableMap.Builder<TagKey<Enchantment>, Modifier> enchantmentTagBuilder = ImmutableMap.builder();
     size = buffer.readVarInt();
     for (int i = 0; i < size; i++) {
@@ -173,6 +180,7 @@ public class UpdateModifiersPacket implements IThreadsafePacket {
 
   @Override
   public void handleThreadsafe(IPayloadContext context) {
-    ModifierManager.INSTANCE.updateModifiersFromServer(allModifiers, tags, enchantmentMap, enchantmentTagMappings);
+    Map<Enchantment,Modifier> enchantments = pendingEnchantments != null ? resolveEnchantments(pendingEnchantments) : enchantmentMap;
+    ModifierManager.INSTANCE.updateModifiersFromServer(allModifiers, tags, enchantments, enchantmentTagMappings);
   }
 }

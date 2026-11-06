@@ -250,6 +250,7 @@ dependencies {
         throw new GradleException("Missing ${hiltJar}; fetch the matching Hilt release JAR before building ModernFoundry")
     }
     implementation files(hiltJar)
+    compileOnly files(rootProject.file('libs/ponder-neoforge-1.0.82+mc1.21.1.jar'))
     jarJar(implementation('modernmods:hilt:1.13')) {
         version {
             strictly '[1.13]'

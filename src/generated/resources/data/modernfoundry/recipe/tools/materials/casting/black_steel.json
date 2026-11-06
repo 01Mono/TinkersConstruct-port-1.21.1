@@ -1,0 +1,20 @@
+{
+  "type": "modernfoundry:material_fluid",
+  "id": "modernfoundry:tools/materials/casting/black_steel",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:ingots/black_steel"
+    }
+  ],
+  "fluid": {
+    "amount": 100,
+    "fluid": "tfc:metal/black_steel"
+  },
+  "output": "modernfoundry:black_steel",
+  "temperature": 1200
+}

@@ -3,16 +3,6 @@
     "modernfoundry:antiaquatic": "modernfoundry:item/tool/hand_axe/modifiers/modernfoundry_antiaquatic",
     "modernfoundry:bane_of_sssss": "modernfoundry:item/tool/hand_axe/modifiers/modernfoundry_bane_of_sssss",
     "modernfoundry:blasting": "modernfoundry:item/tool/hand_axe/modifiers/modernfoundry_blasting",
-    "modernfoundry:bucketing": [
-      {
-        "type": "modernfoundry:fluid",
-        "mask": "modernfoundry:item/tool/hand_axe/modifiers/modernfoundry_bucketing_full"
-      },
-      {
-        "type": "modernfoundry:basic",
-        "texture": "modernfoundry:item/tool/hand_axe/modifiers/modernfoundry_bucketing"
-      }
-    ],
     "modernfoundry:cooling": "modernfoundry:item/tool/hand_axe/modifiers/modernfoundry_cooling",
     "modernfoundry:diamond": "modernfoundry:item/tool/hand_axe/modifiers/modernfoundry_diamond",
     "modernfoundry:emerald": "modernfoundry:item/tool/hand_axe/modifiers/modernfoundry_emerald",
@@ -51,10 +41,6 @@
         "type": "modernfoundry:tank",
         "full": "modernfoundry:item/tool/hand_axe/modifiers/modernfoundry_tank_full",
         "partial": "modernfoundry:item/tool/hand_axe/modifiers/modernfoundry_tank_partial"
-      },
-      {
-        "type": "modernfoundry:basic",
-        "texture": "modernfoundry:item/tool/hand_axe/modifiers/modernfoundry_tank"
       }
     ],
     "modernfoundry:unbreakable": {

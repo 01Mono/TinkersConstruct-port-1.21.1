@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material_fluid",
+  "id": "modernfoundry:tools/materials/casting/brass",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "fluid": {
+    "amount": 90,
+    "tag": "c:molten_brass"
+  },
+  "output": "modernfoundry:brass",
+  "temperature": 905
+}

@@ -1,5 +1,6 @@
 package modernmods.modernfoundry.library.tools.capability.fluid;
 
+import modernmods.modernfoundry.library.tools.nbt.ToolStack;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import net.minecraft.resources.ResourceLocation;
@@ -63,6 +64,13 @@ public class ToolFluidCapability extends FluidModifierHookIterator<ModifierEntry
   @Getter
   private final ItemStack container;
   private final Supplier<? extends IToolStackView> tool;
+
+  /** Gets the fluid handler for the given tool stack, or null if it has no tanks */
+  @Nullable
+  public static IFluidHandlerItem getHandler(ItemStack stack) {
+    ToolStack tool = ToolStack.from(stack);
+    return tool.getVolatileData().getInt(TOTAL_TANKS) > 0 ? new ToolFluidCapability(stack, () -> tool) : null;
+  }
 
   /* Basic inventory */
 

@@ -1,0 +1,29 @@
+{
+  "type": "modernfoundry:alloy",
+  "id": "modernfoundry:smeltery/alloys/molten_fluix",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ],
+  "inputs": [
+    {
+      "amount": 100,
+      "fluid": "modernfoundry:molten_certus_quartz"
+    },
+    {
+      "amount": 100,
+      "fluid": "modernfoundry:molten_quartz"
+    },
+    {
+      "amount": 100,
+      "tag": "c:molten_copper"
+    }
+  ],
+  "result": {
+    "amount": 200,
+    "fluid": "modernfoundry:molten_fluix"
+  },
+  "temperature": 1100
+}

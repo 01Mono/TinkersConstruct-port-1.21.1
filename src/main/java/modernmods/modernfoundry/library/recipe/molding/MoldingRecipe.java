@@ -65,6 +65,6 @@ public class MoldingRecipe implements ICommonRecipe<IMoldingContainer> {
 
   @Override
   public ItemStack getResultItem(HolderLookup.Provider access) {
-    return recipeOutput.get();
+    return modernmods.modernfoundry.library.recipe.SafeItemOutput.get(recipeOutput);
   }
 }

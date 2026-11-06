@@ -134,7 +134,7 @@ public class ItemPartRecipe implements IDisplayPartBuilderRecipe {
 
   @Override
   public ItemStack getResultItem(HolderLookup.Provider access) {
-    return result.get();
+    return modernmods.modernfoundry.library.recipe.SafeItemOutput.get(result);
   }
 
   @Override

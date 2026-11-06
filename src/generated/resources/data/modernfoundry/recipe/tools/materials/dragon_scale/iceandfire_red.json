@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/dragon_scale/iceandfire_red",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonscales_red"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonscales_red"
+  },
+  "material": "modernfoundry:dragon_scale",
+  "needed": 1,
+  "value": 1
+}

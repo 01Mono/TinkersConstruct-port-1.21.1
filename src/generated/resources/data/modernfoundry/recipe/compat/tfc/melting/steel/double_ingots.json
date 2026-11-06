@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:double_ingots/steel"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:double_ingots/steel"
+  },
+  "result": {
+    "amount": 180,
+    "tag": "c:molten_steel"
+  },
+  "temperature": 950,
+  "time": 80
+}

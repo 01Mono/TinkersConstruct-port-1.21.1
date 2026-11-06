@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/rose_quartz/item",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "ingredient": {
+    "item": "create:polished_rose_quartz"
+  },
+  "material": "modernfoundry:rose_quartz",
+  "needed": 1,
+  "value": 1
+}

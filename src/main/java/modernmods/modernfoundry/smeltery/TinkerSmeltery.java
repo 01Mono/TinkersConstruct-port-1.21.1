@@ -500,6 +500,11 @@ public final class TinkerSmeltery extends TinkerModule {
     registerTankItem(event, scorchedLantern);
     searedTank.forEach(block -> registerTankItem(event, block));
     scorchedTank.forEach(block -> registerTankItem(event, block));
+    for (net.minecraft.world.item.Item item : net.minecraft.core.registries.BuiltInRegistries.ITEM) {
+      if (item instanceof modernmods.modernfoundry.library.tools.item.IModifiable) {
+        event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> modernmods.modernfoundry.library.tools.capability.fluid.ToolFluidCapability.getHandler(stack), item);
+      }
+    }
   }
 
   private static <BE extends HiltBlockEntity & modernmods.modernfoundry.smeltery.block.entity.ILegacyCapabilityBlockEntity> void registerFluid(RegisterCapabilitiesEvent event, BlockEntityType<BE> type) {

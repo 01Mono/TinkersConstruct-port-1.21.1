@@ -1,0 +1,28 @@
+{
+  "type": "modernfoundry:alloy",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    }
+  ],
+  "inputs": [
+    {
+      "amount": 20,
+      "fluid": "tfc:metal/nickel"
+    },
+    {
+      "amount": 60,
+      "fluid": "tfc:metal/steel"
+    },
+    {
+      "amount": 20,
+      "fluid": "tfc:metal/black_bronze"
+    }
+  ],
+  "result": {
+    "amount": 100,
+    "fluid": "tfc:metal/black_steel"
+  },
+  "temperature": 1200
+}

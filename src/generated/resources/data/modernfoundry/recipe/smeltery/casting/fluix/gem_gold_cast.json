@@ -1,0 +1,21 @@
+{
+  "type": "modernfoundry:casting_table",
+  "id": "modernfoundry:smeltery/casting/fluix/gem_gold_cast",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:fluix_crystal"
+    }
+  ],
+  "cast": {
+    "tag": "modernfoundry:casts/multi_use/gem"
+  },
+  "cooling_time": 62,
+  "fluid": {
+    "amount": 100,
+    "fluid": "modernfoundry:molten_fluix"
+  },
+  "result": {
+    "item": "ae2:fluix_crystal"
+  }
+}

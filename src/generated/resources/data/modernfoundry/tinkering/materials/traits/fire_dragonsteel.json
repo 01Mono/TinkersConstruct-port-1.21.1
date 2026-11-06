@@ -1,0 +1,16 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "modernfoundry:dragonfire"
+    }
+  ],
+  "perStat": {
+    "modernfoundry:armor": [
+      {
+        "level": 2,
+        "name": "modernfoundry:fire_protection"
+      }
+    ]
+  }
+}

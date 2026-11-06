@@ -19,6 +19,7 @@ import modernmods.modernfoundry.library.utils.Util;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -36,6 +37,8 @@ public class MultitankFuelModule extends FuelModule implements IFluidHandler {
 
   /** Map of all tank handlers at each relevant position. Used for fast switching between handlers, notably in the UI */
   private Map<BlockPos,LazyOptional<IFluidHandler>> tankHandlers;
+  /** Block entities backing the cached handlers, used to notice a tank being replaced */
+  private final Map<BlockPos,BlockEntity> tankEntities = new HashMap<>();
   /** Listener to attach to display capabilities */
   private final Consumer<LazyOptional<IFluidHandler>> tankHandlerListener = new WeakConsumerWrapper<>(this, (self, cap) -> {
     if (self.tankHandlers != null) {
@@ -70,6 +73,22 @@ public class MultitankFuelModule extends FuelModule implements IFluidHandler {
         }
       }
       tankHandlers = null;
+      tankEntities.clear();
+    }
+    clearLastListener();
+  }
+
+  /** Clears cached handlers if any tank block entity changed since they were fetched */
+  private void clearReplacedTanks() {
+    if (tankHandlers != null) {
+      Level world = getLevel();
+      for (Map.Entry<BlockPos,BlockEntity> entry : tankEntities.entrySet()) {
+        if (world.isLoaded(entry.getKey()) && world.getBlockEntity(entry.getKey()) != entry.getValue()) {
+          clearFluidListeners();
+          clearLastListener();
+          return;
+        }
+      }
     }
   }
 
@@ -82,12 +101,14 @@ public class MultitankFuelModule extends FuelModule implements IFluidHandler {
       if (handler.isPresent()) {
         handler.addListener(tankHandlerListener);
         tankHandlers.put(pos, handler);
+        tankEntities.put(pos, be);
       }
     }
   }
 
   /** Gets the map from position to fluid handler */
   private Map<BlockPos,LazyOptional<IFluidHandler>> getTankHandlers() {
+    clearReplacedTanks();
     if (tankHandlers == null) {
       tankHandlers = new LinkedHashMap<>();
       Level world = getLevel();
@@ -98,6 +119,7 @@ public class MultitankFuelModule extends FuelModule implements IFluidHandler {
           if (handler.isPresent()) {
             handler.addListener(tankHandlerListener);
             tankHandlers.put(pos, handler);
+            tankEntities.put(pos, te);
           }
         }
       }
@@ -135,6 +157,7 @@ public class MultitankFuelModule extends FuelModule implements IFluidHandler {
    */
   @Override
   public int findFuel(boolean consume) {
+    clearReplacedTanks();
     // only fetch a handler if we haven't done so
     if (fluidHandler != null) {
       // if we have a handler, try to use that if possible
@@ -231,6 +254,7 @@ public class MultitankFuelModule extends FuelModule implements IFluidHandler {
 
   @Override
   public FuelInfo getFuelInfo() {
+    clearReplacedTanks();
     // fetch the primary fuel handler, the tank we last pulled fuel from
     // Y of big negative is how the UI syncs null, meaning we have not yet consumed fuel
     if (fluidHandler == null && lastPos.getY() != NULL_POS.getY()) {

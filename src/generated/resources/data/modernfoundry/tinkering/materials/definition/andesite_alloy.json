@@ -1,0 +1,10 @@
+{
+  "condition": {
+    "type": "neoforge:mod_loaded",
+    "modid": "create"
+  },
+  "craftable": false,
+  "hidden": false,
+  "sortOrder": 63,
+  "tier": 1
+}

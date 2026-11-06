@@ -1,0 +1,20 @@
+{
+  "type": "modernfoundry:material_fluid",
+  "id": "modernfoundry:tools/materials/casting/black_bronze",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:ingots/black_bronze"
+    }
+  ],
+  "fluid": {
+    "amount": 100,
+    "fluid": "tfc:metal/black_bronze"
+  },
+  "output": "modernfoundry:black_bronze",
+  "temperature": 850
+}

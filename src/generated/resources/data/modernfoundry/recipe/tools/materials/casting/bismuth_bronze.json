@@ -1,0 +1,20 @@
+{
+  "type": "modernfoundry:material_fluid",
+  "id": "modernfoundry:tools/materials/casting/bismuth_bronze",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:ingots/bismuth_bronze"
+    }
+  ],
+  "fluid": {
+    "amount": 100,
+    "fluid": "tfc:metal/bismuth_bronze"
+  },
+  "output": "modernfoundry:bismuth_bronze",
+  "temperature": 800
+}

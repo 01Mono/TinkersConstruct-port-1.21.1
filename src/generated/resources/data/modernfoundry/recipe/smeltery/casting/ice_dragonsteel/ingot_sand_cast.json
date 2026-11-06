@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:casting_table",
+  "id": "modernfoundry:smeltery/casting/ice_dragonsteel/ingot_sand_cast",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonsteel_ice_ingot"
+    }
+  ],
+  "cast": {
+    "tag": "modernfoundry:casts/single_use/ingot"
+  },
+  "cast_consumed": true,
+  "cooling_time": 90,
+  "fluid": {
+    "amount": 90,
+    "fluid": "modernfoundry:molten_ice_dragonsteel"
+  },
+  "result": {
+    "item": "iceandfire:dragonsteel_ice_ingot"
+  }
+}

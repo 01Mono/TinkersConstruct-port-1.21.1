@@ -8,10 +8,6 @@
       "texture": "modernfoundry:item/tool/cleaver/modifiers/modernfoundry_bane_of_sssss",
       "texture_large": "modernfoundry:item/tool/cleaver/large/modifiers/modernfoundry_bane_of_sssss"
     },
-    "modernfoundry:blasting": {
-      "texture": "modernfoundry:item/tool/cleaver/modifiers/modernfoundry_blasting",
-      "texture_large": "modernfoundry:item/tool/cleaver/large/modifiers/modernfoundry_blasting"
-    },
     "modernfoundry:bucketing": [
       {
         "type": "modernfoundry:fluid",

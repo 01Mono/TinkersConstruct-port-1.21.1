@@ -1,0 +1,19 @@
+{
+  "type": "modernfoundry:melting",
+  "id": "modernfoundry:smeltery/melting/certus_quartz/charged_crystal",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:charged_certus_quartz_crystal"
+    }
+  ],
+  "ingredient": {
+    "item": "ae2:charged_certus_quartz_crystal"
+  },
+  "result": {
+    "amount": 100,
+    "fluid": "modernfoundry:molten_certus_quartz"
+  },
+  "temperature": 950,
+  "time": 55
+}

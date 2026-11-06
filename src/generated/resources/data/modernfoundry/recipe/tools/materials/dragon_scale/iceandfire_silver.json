@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/dragon_scale/iceandfire_silver",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonscales_silver"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonscales_silver"
+  },
+  "material": "modernfoundry:dragon_scale",
+  "needed": 1,
+  "value": 1
+}

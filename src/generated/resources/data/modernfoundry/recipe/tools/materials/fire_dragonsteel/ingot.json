@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/fire_dragonsteel/ingot",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonsteel_fire_ingot"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonsteel_fire_ingot"
+  },
+  "material": "modernfoundry:fire_dragonsteel",
+  "needed": 1,
+  "value": 1
+}

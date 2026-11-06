@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "G": {
-      "tag": "c:glass/tinted"
+      "tag": "c:glass_blocks/tinted"
     },
     "b": {
       "item": "modernfoundry:scorched_brick"

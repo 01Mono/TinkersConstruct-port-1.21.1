@@ -2,7 +2,7 @@
   "type": "modernfoundry:casting_basin",
   "id": "modernfoundry:smeltery/casting/scorched/glass_tinted",
   "cast": {
-    "tag": "c:glass/tinted"
+    "tag": "c:glass_blocks/tinted"
   },
   "cast_consumed": true,
   "cooling_time": 166,

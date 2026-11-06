@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:double_sheets/bismuth"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:double_sheets/bismuth"
+  },
+  "result": {
+    "amount": 400,
+    "fluid": "tfc:metal/bismuth"
+  },
+  "temperature": 300,
+  "time": 120
+}

@@ -1,0 +1,25 @@
+{
+  "type": "create:compacting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:ingots/brass"
+    }
+  ],
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_brass"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:brass_ingot"
+    }
+  ]
+}

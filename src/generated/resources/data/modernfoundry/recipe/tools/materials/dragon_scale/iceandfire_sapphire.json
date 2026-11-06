@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/dragon_scale/iceandfire_sapphire",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonscales_sapphire"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonscales_sapphire"
+  },
+  "material": "modernfoundry:dragon_scale",
+  "needed": 1,
+  "value": 1
+}

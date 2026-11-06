@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:rods/black_bronze"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:rods/black_bronze"
+  },
+  "result": {
+    "amount": 50,
+    "fluid": "tfc:metal/black_bronze"
+  },
+  "temperature": 850,
+  "time": 40
+}

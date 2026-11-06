@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/fluix/block",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:fluix_block"
+    }
+  ],
+  "ingredient": {
+    "item": "ae2:fluix_block"
+  },
+  "material": "modernfoundry:fluix",
+  "needed": 1,
+  "value": 4
+}

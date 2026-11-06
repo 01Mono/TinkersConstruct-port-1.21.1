@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material_melting",
+  "id": "modernfoundry:tools/materials/melting/fluix",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:fluix_crystal"
+    }
+  ],
+  "input": "modernfoundry:fluix",
+  "result": {
+    "amount": 100,
+    "fluid": "modernfoundry:molten_fluix"
+  },
+  "temperature": 1100
+}

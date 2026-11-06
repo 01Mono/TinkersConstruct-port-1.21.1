@@ -1,0 +1,18 @@
+{
+  "type": "modernfoundry:casting_basin",
+  "id": "modernfoundry:smeltery/casting/certus_quartz/block",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:quartz_block"
+    }
+  ],
+  "cooling_time": 115,
+  "fluid": {
+    "amount": 400,
+    "fluid": "modernfoundry:molten_certus_quartz"
+  },
+  "result": {
+    "item": "ae2:quartz_block"
+  }
+}

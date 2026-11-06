@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material_fluid",
+  "id": "modernfoundry:tools/materials/casting/fluix",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:fluix_crystal"
+    }
+  ],
+  "fluid": {
+    "amount": 100,
+    "fluid": "modernfoundry:molten_fluix"
+  },
+  "output": "modernfoundry:fluix",
+  "temperature": 1100
+}

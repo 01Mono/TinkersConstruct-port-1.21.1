@@ -88,7 +88,7 @@ public record TankInteractionModule(@Nullable InteractionSource source) implemen
         FluidStack drained = cap.drain(TANK_HELPER.getCapacity(tool), FluidAction.EXECUTE);
         if (!drained.isEmpty()) {
           TANK_HELPER.setFluid(tool, drained);
-          sound = FluidTransferHelper.getFillSound(fluidStack);
+          sound = FluidTransferHelper.getFillSound(drained);
         }
       } else {
         // filter drained to be the same as the current fluid

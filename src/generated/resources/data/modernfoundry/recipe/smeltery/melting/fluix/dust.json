@@ -1,0 +1,19 @@
+{
+  "type": "modernfoundry:melting",
+  "id": "modernfoundry:smeltery/melting/fluix/dust",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:fluix_dust"
+    }
+  ],
+  "ingredient": {
+    "item": "ae2:fluix_dust"
+  },
+  "result": {
+    "amount": 100,
+    "fluid": "modernfoundry:molten_fluix"
+  },
+  "temperature": 1100,
+  "time": 45
+}

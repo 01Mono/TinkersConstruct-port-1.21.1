@@ -1,0 +1,20 @@
+{
+  "type": "modernfoundry:damagable_melting",
+  "id": "modernfoundry:smeltery/melting/fire_dragonsteel/leggings",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonsteel_fire_leggings"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonsteel_fire_leggings"
+  },
+  "result": {
+    "amount": 630,
+    "fluid": "modernfoundry:molten_fire_dragonsteel",
+    "unit_size": 90
+  },
+  "temperature": 2000,
+  "time": 200
+}

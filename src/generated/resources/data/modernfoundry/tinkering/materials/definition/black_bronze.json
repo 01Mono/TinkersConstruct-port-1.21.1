@@ -1,0 +1,10 @@
+{
+  "condition": {
+    "type": "neoforge:mod_loaded",
+    "modid": "tfc"
+  },
+  "craftable": false,
+  "hidden": false,
+  "sortOrder": 71,
+  "tier": 2
+}

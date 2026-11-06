@@ -1,0 +1,19 @@
+{
+  "type": "modernfoundry:melting",
+  "id": "modernfoundry:smeltery/melting/ice_dragonsteel/ingot",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonsteel_ice_ingot"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonsteel_ice_ingot"
+  },
+  "result": {
+    "amount": 90,
+    "fluid": "modernfoundry:molten_ice_dragonsteel"
+  },
+  "temperature": 2000,
+  "time": 90
+}

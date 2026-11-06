@@ -1,0 +1,19 @@
+{
+  "type": "modernfoundry:melting",
+  "id": "modernfoundry:smeltery/melting/certus_quartz/block",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:quartz_block"
+    }
+  ],
+  "ingredient": {
+    "item": "ae2:quartz_block"
+  },
+  "result": {
+    "amount": 400,
+    "fluid": "modernfoundry:molten_certus_quartz"
+  },
+  "temperature": 950,
+  "time": 110
+}

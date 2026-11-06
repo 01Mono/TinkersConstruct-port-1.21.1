@@ -1,0 +1,25 @@
+{
+  "type": "create:compacting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:ingots/cobalt"
+    }
+  ],
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 90,
+      "tag": "c:molten_cobalt"
+    }
+  ],
+  "results": [
+    {
+      "id": "modernfoundry:cobalt_ingot"
+    }
+  ]
+}

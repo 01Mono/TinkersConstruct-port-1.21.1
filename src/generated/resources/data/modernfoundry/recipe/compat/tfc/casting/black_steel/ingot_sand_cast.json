@@ -1,0 +1,25 @@
+{
+  "type": "modernfoundry:casting_table",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:ingots/black_steel"
+    }
+  ],
+  "cast": {
+    "tag": "modernfoundry:casts/single_use/ingot"
+  },
+  "cast_consumed": true,
+  "cooling_time": 60,
+  "fluid": {
+    "amount": 100,
+    "fluid": "tfc:metal/black_steel"
+  },
+  "result": {
+    "tag": "c:ingots/black_steel"
+  }
+}

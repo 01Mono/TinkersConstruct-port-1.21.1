@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:sheets/red_steel"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:sheets/red_steel"
+  },
+  "result": {
+    "amount": 200,
+    "fluid": "tfc:metal/red_steel"
+  },
+  "temperature": 1400,
+  "time": 80
+}

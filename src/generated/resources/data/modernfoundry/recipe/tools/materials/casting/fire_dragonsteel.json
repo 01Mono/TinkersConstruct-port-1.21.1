@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material_fluid",
+  "id": "modernfoundry:tools/materials/casting/fire_dragonsteel",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonsteel_fire_ingot"
+    }
+  ],
+  "fluid": {
+    "amount": 90,
+    "fluid": "modernfoundry:molten_fire_dragonsteel"
+  },
+  "output": "modernfoundry:fire_dragonsteel",
+  "temperature": 2000
+}

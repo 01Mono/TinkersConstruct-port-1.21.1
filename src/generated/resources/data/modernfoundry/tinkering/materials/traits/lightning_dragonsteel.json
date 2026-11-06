@@ -1,0 +1,16 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "modernfoundry:dragonstorm"
+    }
+  ],
+  "perStat": {
+    "modernfoundry:armor": [
+      {
+        "level": 1,
+        "name": "modernfoundry:lightspeed_armor"
+      }
+    ]
+  }
+}

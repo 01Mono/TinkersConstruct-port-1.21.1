@@ -494,11 +494,11 @@ public class ItemTagProvider extends ItemTagsProvider {
 
     // contains any ground stones
     this.tag(TinkerTags.Items.STONESHIELDS)
-        .addTag(Tags.Items.STONE)
-        .addTag(Tags.Items.COBBLESTONE)
-        .addTag(Tags.Items.SANDSTONE)
+        .addTag(Tags.Items.STONES)
+        .addTag(Tags.Items.COBBLESTONES)
+        .addTag(Tags.Items.SANDSTONE_BLOCKS)
         .addTag(Tags.Items.END_STONES)
-        .addTag(Tags.Items.GRAVEL) // for shovels and axes to use
+        .addTag(Tags.Items.GRAVELS) // for shovels and axes to use
         .add(Items.NETHERRACK, Items.BASALT, Items.POLISHED_BASALT, Items.BLACKSTONE, Items.POLISHED_BLACKSTONE);
     this.tag(TinkerTags.Items.FIREBALLS).add(Items.FIRE_CHARGE);
     this.tag(TinkerTags.Items.TOOL_INVENTORY_BLACKLIST)

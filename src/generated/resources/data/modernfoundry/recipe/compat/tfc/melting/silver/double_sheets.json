@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:double_sheets/silver"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:double_sheets/silver"
+  },
+  "result": {
+    "amount": 360,
+    "tag": "c:molten_silver"
+  },
+  "temperature": 700,
+  "time": 120
+}

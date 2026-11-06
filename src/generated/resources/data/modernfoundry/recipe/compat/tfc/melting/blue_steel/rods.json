@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:rods/blue_steel"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:rods/blue_steel"
+  },
+  "result": {
+    "amount": 50,
+    "fluid": "tfc:metal/blue_steel"
+  },
+  "temperature": 1400,
+  "time": 40
+}

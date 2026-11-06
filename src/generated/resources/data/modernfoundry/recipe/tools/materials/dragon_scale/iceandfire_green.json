@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/dragon_scale/iceandfire_green",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonscales_green"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonscales_green"
+  },
+  "material": "modernfoundry:dragon_scale",
+  "needed": 1,
+  "value": 1
+}

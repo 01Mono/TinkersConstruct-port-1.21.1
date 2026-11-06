@@ -1,0 +1,25 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:nuggets/constantan"
+    }
+  ],
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:nuggets/constantan"
+    }
+  ],
+  "results": [
+    {
+      "amount": 10,
+      "id": "modernfoundry:molten_constantan"
+    }
+  ]
+}

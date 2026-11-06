@@ -8,10 +8,6 @@
       "texture": "modernfoundry:item/tool/excavator/modifiers/modernfoundry_bane_of_sssss",
       "texture_large": "modernfoundry:item/tool/excavator/large/modifiers/modernfoundry_bane_of_sssss"
     },
-    "modernfoundry:blasting": {
-      "texture": "modernfoundry:item/tool/excavator/modifiers/modernfoundry_blasting",
-      "texture_large": "modernfoundry:item/tool/excavator/large/modifiers/modernfoundry_blasting"
-    },
     "modernfoundry:bucketing": [
       {
         "type": "modernfoundry:fluid",
@@ -35,10 +31,6 @@
     "modernfoundry:emerald": {
       "texture": "modernfoundry:item/tool/excavator/modifiers/modernfoundry_emerald",
       "texture_large": "modernfoundry:item/tool/excavator/large/modifiers/modernfoundry_emerald"
-    },
-    "modernfoundry:experienced": {
-      "texture": "modernfoundry:item/tool/excavator/modifiers/modernfoundry_experienced",
-      "texture_large": "modernfoundry:item/tool/excavator/large/modifiers/modernfoundry_experienced"
     },
     "modernfoundry:fiery": {
       "luminosity": 10,

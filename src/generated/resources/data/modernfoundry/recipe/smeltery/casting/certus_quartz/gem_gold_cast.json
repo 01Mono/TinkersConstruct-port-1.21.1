@@ -1,0 +1,21 @@
+{
+  "type": "modernfoundry:casting_table",
+  "id": "modernfoundry:smeltery/casting/certus_quartz/gem_gold_cast",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:certus_quartz_crystal"
+    }
+  ],
+  "cast": {
+    "tag": "modernfoundry:casts/multi_use/gem"
+  },
+  "cooling_time": 58,
+  "fluid": {
+    "amount": 100,
+    "fluid": "modernfoundry:molten_certus_quartz"
+  },
+  "result": {
+    "item": "ae2:certus_quartz_crystal"
+  }
+}

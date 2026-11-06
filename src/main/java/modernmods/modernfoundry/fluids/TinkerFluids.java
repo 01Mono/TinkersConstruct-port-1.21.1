@@ -191,6 +191,15 @@ public final class TinkerFluids extends TinkerModule {
   public static final FlowingFluidObject<BaseFlowingFluid> moltenConstantan = FLUIDS.registerMetal("molten_constantan").type(hot("molten_constantan").temperature(1220).lightLevel(10)).block(createBurning(MapColor.TERRACOTTA_RED, 10, 10, 6f)).bucket().commonTag().flowing();
   public static final FlowingFluidObject<BaseFlowingFluid> moltenPewter     = FLUIDS.registerMetal("molten_pewter").type(hot("molten_pewter").temperature(700).lightLevel(10)).block(createBurning(MapColor.COLOR_GRAY, 10, 10, 6f)).bucket().commonTag().flowing();
 
+  public static final FlowingFluidObject<BaseFlowingFluid> moltenFireDragonsteel      = FLUIDS.registerMetal("molten_fire_dragonsteel").type(hot("molten_fire_dragonsteel").temperature(2000).lightLevel(15)).block(createBurning(MapColor.COLOR_RED, 15, 15, 8f)).bucket().flowing();
+  public static final FlowingFluidObject<BaseFlowingFluid> moltenIceDragonsteel       = FLUIDS.registerMetal("molten_ice_dragonsteel").type(hot("molten_ice_dragonsteel").temperature(2000).lightLevel(12)).block(createBurning(MapColor.ICE, 12, 15, 8f)).bucket().flowing();
+  public static final FlowingFluidObject<BaseFlowingFluid> moltenLightningDragonsteel = FLUIDS.registerMetal("molten_lightning_dragonsteel").type(hot("molten_lightning_dragonsteel").temperature(2000).lightLevel(15)).block(createBurning(MapColor.COLOR_PURPLE, 15, 15, 8f)).bucket().flowing();
+  public static final FlowingFluidObject<BaseFlowingFluid> fireDragonBlood      = FLUIDS.register("fire_dragon_blood").type(hot("fire_dragon_blood").temperature(2500).lightLevel(15).density(3500)).block(createBurning(MapColor.COLOR_RED, 15, 15, 6f)).bucket().flowing();
+  public static final FlowingFluidObject<BaseFlowingFluid> iceDragonBlood       = FLUIDS.register("ice_dragon_blood").type(hot("ice_dragon_blood").temperature(2500).lightLevel(10).density(3500)).block(createBurning(MapColor.COLOR_LIGHT_BLUE, 10, 15, 6f)).bucket().flowing();
+  public static final FlowingFluidObject<BaseFlowingFluid> lightningDragonBlood = FLUIDS.register("lightning_dragon_blood").type(hot("lightning_dragon_blood").temperature(2500).lightLevel(15).density(3500)).block(createBurning(MapColor.COLOR_PURPLE, 15, 15, 6f)).bucket().flowing();
+  public static final FlowingFluidObject<BaseFlowingFluid> moltenCertusQuartz = FLUIDS.registerGem("molten_certus_quartz").type(hot("molten_certus_quartz").temperature(950).lightLevel(8)).block(createBurning(MapColor.COLOR_LIGHT_BLUE, 8, 10, 5f)).bucket().flowing();
+  public static final FlowingFluidObject<BaseFlowingFluid> moltenFluix        = FLUIDS.registerGem("molten_fluix").type(hot("molten_fluix").temperature(1100).lightLevel(10)).block(createBurning(MapColor.COLOR_PURPLE, 10, 10, 5f)).bucket().flowing();
+
   // mod-specific compat
   // thermal
   public static final FlowingFluidObject<BaseFlowingFluid> moltenEnderium = FLUIDS.registerMetal("molten_enderium").type(hot("molten_enderium").temperature(1650).lightLevel(12)).block(createBurning(MapColor.COLOR_CYAN, 12, 10, 7f)).bucket().commonTag().flowing();
@@ -346,6 +355,14 @@ public final class TinkerFluids extends TinkerModule {
       DispenserBlock.registerBehavior(moltenInvar, dispenseBucket);
       DispenserBlock.registerBehavior(moltenConstantan, dispenseBucket);
       DispenserBlock.registerBehavior(moltenPewter, dispenseBucket);
+      DispenserBlock.registerBehavior(moltenFireDragonsteel, dispenseBucket);
+      DispenserBlock.registerBehavior(moltenIceDragonsteel, dispenseBucket);
+      DispenserBlock.registerBehavior(moltenLightningDragonsteel, dispenseBucket);
+      DispenserBlock.registerBehavior(fireDragonBlood, dispenseBucket);
+      DispenserBlock.registerBehavior(iceDragonBlood, dispenseBucket);
+      DispenserBlock.registerBehavior(lightningDragonBlood, dispenseBucket);
+      DispenserBlock.registerBehavior(moltenCertusQuartz, dispenseBucket);
+      DispenserBlock.registerBehavior(moltenFluix, dispenseBucket);
       DispenserBlock.registerBehavior(moltenSteel, dispenseBucket);
       // mod-specific compat alloys
       DispenserBlock.registerBehavior(moltenEnderium, dispenseBucket);
@@ -457,6 +474,18 @@ public final class TinkerFluids extends TinkerModule {
     acceptCompat(output, moltenInvar, MaterialIds.invar);
     acceptCompat(output, moltenConstantan, MaterialIds.constantan);
     acceptCompat(output, moltenPewter, MaterialIds.pewter);
+    if (ModList.get().isLoaded("iceandfire")) {
+      acceptCompat(output, moltenFireDragonsteel, MaterialIds.fireDragonsteel);
+      acceptCompat(output, moltenIceDragonsteel, MaterialIds.iceDragonsteel);
+      acceptCompat(output, moltenLightningDragonsteel, MaterialIds.lightningDragonsteel);
+      output.accept(fireDragonBlood);
+      output.accept(iceDragonBlood);
+      output.accept(lightningDragonBlood);
+    }
+    if (ModList.get().isLoaded("ae2")) {
+      output.accept(moltenCertusQuartz);
+      output.accept(moltenFluix);
+    }
     acceptMolten(output, moltenNicrosil, MaterialIds.nicrosil);
     acceptMolten(output, moltenEnderium);
     acceptMolten(output, moltenLumium);

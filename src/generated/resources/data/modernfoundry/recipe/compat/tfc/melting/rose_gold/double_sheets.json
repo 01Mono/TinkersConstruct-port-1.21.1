@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:double_sheets/rose_gold"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:double_sheets/rose_gold"
+  },
+  "result": {
+    "amount": 360,
+    "tag": "c:molten_rose_gold"
+  },
+  "temperature": 700,
+  "time": 120
+}

@@ -38,6 +38,9 @@ public class CommonsClientEvents extends ClientEventBase {
     TinkerBook.MIGHTY_SMELTING.fontRenderer = unicode;
     TinkerBook.FANTASTIC_FOUNDRY.fontRenderer = unicode;
     TinkerBook.ENCYCLOPEDIA.fontRenderer = unicode;
+    if (net.neoforged.fml.ModList.get().isLoaded("ponder")) {
+      event.enqueueWork(modernmods.modernfoundry.plugin.ponder.TinkerPonderPlugin::init);
+    }
   }
 
   @SubscribeEvent

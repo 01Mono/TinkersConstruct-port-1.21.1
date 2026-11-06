@@ -57,7 +57,7 @@ public class ItemCastingRecipe extends AbstractCastingRecipe implements IDisplay
 
   @Override
   public ItemStack getResultItem(HolderLookup.Provider access) {
-    return this.result.get();
+    return modernmods.modernfoundry.library.recipe.SafeItemOutput.get(this.result);
   }
 
   @Override

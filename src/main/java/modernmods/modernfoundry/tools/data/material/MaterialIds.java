@@ -127,6 +127,12 @@ public final class MaterialIds {
   // twilight forest
   public static final MaterialId ironwood = id("ironwood");
   public static final MaterialId steeleaf = id("steeleaf");
+  public static final MaterialId fireDragonsteel = id("fire_dragonsteel");
+  public static final MaterialId iceDragonsteel = id("ice_dragonsteel");
+  public static final MaterialId lightningDragonsteel = id("lightning_dragonsteel");
+  public static final MaterialId certusQuartz = id("certus_quartz");
+  public static final MaterialId fluix = id("fluix");
+  public static final MaterialId skyStone = id("sky_stone");
   public static final MaterialId fiery = id("fiery");
 
   // plate

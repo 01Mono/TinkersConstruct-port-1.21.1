@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material_fluid",
+  "id": "modernfoundry:tools/materials/casting/certus_quartz",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:certus_quartz_crystal"
+    }
+  ],
+  "fluid": {
+    "amount": 100,
+    "fluid": "modernfoundry:molten_certus_quartz"
+  },
+  "output": "modernfoundry:certus_quartz",
+  "temperature": 950
+}

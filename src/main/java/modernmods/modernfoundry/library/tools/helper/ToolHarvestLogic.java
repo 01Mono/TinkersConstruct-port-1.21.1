@@ -265,7 +265,7 @@ public class ToolHarvestLogic {
       player.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
       ToolHarvestContext context = new ToolHarvestContext(world, serverPlayer, state, pos, hitFace,
         !player.isCreative() && state.canHarvestBlock(world, pos, player), false);
-      breakBlock(tool, ItemStack.EMPTY, context, true);
+      breakBlock(tool, ItemStack.EMPTY, context, false);
       player.setItemInHand(InteractionHand.MAIN_HAND, stack);
     } else {
       // run standard breaking logic
@@ -305,7 +305,7 @@ public class ToolHarvestLogic {
 
     // actually break the block, run AOE if successful
     int harvested = 0;
-    if (breakBlock(tool, stack, context, true)) {
+    if (breakBlock(tool, stack, context, false)) {
       harvested += 1;
       for (BlockPos extraPos : extraBlocks) {
         BlockState extraState = world.getBlockState(extraPos);

@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:sheets/wrought_iron"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:sheets/wrought_iron"
+  },
+  "result": {
+    "amount": 200,
+    "fluid": "tfc:metal/wrought_iron"
+  },
+  "temperature": 950,
+  "time": 80
+}

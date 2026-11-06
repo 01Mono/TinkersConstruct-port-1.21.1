@@ -1,0 +1,24 @@
+{
+  "type": "modernfoundry:alloy",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    }
+  ],
+  "inputs": [
+    {
+      "amount": 60,
+      "fluid": "tfc:metal/silver"
+    },
+    {
+      "amount": 40,
+      "fluid": "tfc:metal/copper"
+    }
+  ],
+  "result": {
+    "amount": 100,
+    "fluid": "tfc:metal/sterling_silver"
+  },
+  "temperature": 1000
+}

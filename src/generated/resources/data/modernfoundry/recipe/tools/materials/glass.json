@@ -2,7 +2,7 @@
   "type": "modernfoundry:material",
   "id": "modernfoundry:tools/materials/glass",
   "ingredient": {
-    "tag": "c:glass"
+    "tag": "c:glass_blocks"
   },
   "material": "modernfoundry:glass",
   "needed": 1,

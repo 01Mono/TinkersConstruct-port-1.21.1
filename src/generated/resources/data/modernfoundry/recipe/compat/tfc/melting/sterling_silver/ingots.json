@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:ingots/sterling_silver"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:ingots/sterling_silver"
+  },
+  "result": {
+    "amount": 100,
+    "fluid": "tfc:metal/sterling_silver"
+  },
+  "temperature": 780,
+  "time": 60
+}

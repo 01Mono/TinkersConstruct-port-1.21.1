@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/certus_quartz/crystal",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:certus_quartz_crystal"
+    }
+  ],
+  "ingredient": {
+    "item": "ae2:certus_quartz_crystal"
+  },
+  "material": "modernfoundry:certus_quartz",
+  "needed": 1,
+  "value": 1
+}

@@ -1,0 +1,19 @@
+{
+  "type": "modernfoundry:melting",
+  "id": "modernfoundry:smeltery/melting/fire_dragonsteel/block",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "iceandfire:dragonsteel_fire_block"
+    }
+  ],
+  "ingredient": {
+    "item": "iceandfire:dragonsteel_fire_block"
+  },
+  "result": {
+    "amount": 810,
+    "fluid": "modernfoundry:molten_fire_dragonsteel"
+  },
+  "temperature": 2000,
+  "time": 270
+}

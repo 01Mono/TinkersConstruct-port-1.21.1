@@ -1,0 +1,22 @@
+{
+  "type": "modernfoundry:melting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:sheets/zinc"
+    }
+  ],
+  "ingredient": {
+    "tag": "c:sheets/zinc"
+  },
+  "result": {
+    "amount": 180,
+    "tag": "c:molten_zinc"
+  },
+  "temperature": 700,
+  "time": 80
+}

@@ -1,0 +1,16 @@
+{
+  "type": "modernfoundry:material",
+  "id": "modernfoundry:tools/materials/sky_stone/smooth",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ae2:smooth_sky_stone_block"
+    }
+  ],
+  "ingredient": {
+    "item": "ae2:smooth_sky_stone_block"
+  },
+  "material": "modernfoundry:sky_stone",
+  "needed": 1,
+  "value": 1
+}

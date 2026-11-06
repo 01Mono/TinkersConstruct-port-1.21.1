@@ -1,0 +1,20 @@
+{
+  "type": "modernfoundry:material_melting",
+  "id": "modernfoundry:tools/materials/melting/black_bronze",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    },
+    {
+      "type": "hilt:tag_filled",
+      "tag": "c:ingots/black_bronze"
+    }
+  ],
+  "input": "modernfoundry:black_bronze",
+  "result": {
+    "amount": 100,
+    "fluid": "tfc:metal/black_bronze"
+  },
+  "temperature": 850
+}

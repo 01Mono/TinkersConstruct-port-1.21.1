@@ -1,0 +1,28 @@
+{
+  "type": "modernfoundry:alloy",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfc"
+    }
+  ],
+  "inputs": [
+    {
+      "amount": 20,
+      "fluid": "tfc:metal/zinc"
+    },
+    {
+      "amount": 50,
+      "fluid": "tfc:metal/copper"
+    },
+    {
+      "amount": 30,
+      "fluid": "tfc:metal/bismuth"
+    }
+  ],
+  "result": {
+    "amount": 100,
+    "fluid": "tfc:metal/bismuth_bronze"
+  },
+  "temperature": 1000
+}

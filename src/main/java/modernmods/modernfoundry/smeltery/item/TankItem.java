@@ -217,8 +217,12 @@ public class TankItem extends BlockTooltipItem {
 
   /** Reads a fluid stack from the legacy tank item tag shape. */
   public static FluidStack readFluid(CompoundTag tag) {
-    ResourceLocation fluidName = ResourceLocation.tryParse(tag.getString("FluidName"));
-    int amount = tag.getInt("Amount");
+    if (tag.contains("Fluid", Tag.TAG_COMPOUND)) {
+      tag = tag.getCompound("Fluid");
+    }
+    boolean modern = tag.contains("id");
+    ResourceLocation fluidName = ResourceLocation.tryParse(tag.getString(modern ? "id" : "FluidName"));
+    int amount = tag.getInt(modern ? "amount" : "Amount");
     if (fluidName == null || amount <= 0) {
       return FluidStack.EMPTY;
     }
@@ -319,9 +323,20 @@ public class TankItem extends BlockTooltipItem {
   public static String getSubtype(ItemStack stack) {
     CompoundTag nbt = TagUtil.getTag(stack);
     if (nbt != null && nbt.contains(NBTTags.TANK, Tag.TAG_COMPOUND)) {
-      return nbt.getCompound(NBTTags.TANK).getString("FluidName");
+      FluidStack fluid = readFluid(nbt.getCompound(NBTTags.TANK));
+      return fluid.isEmpty() ? "" : BuiltInRegistries.FLUID.getKey(fluid.getFluid()).toString();
     }
     return "";
+  }
+
+  /** Checks that a fluid has a fluid type, as a broken fluid from another mod throws when asked for it */
+  public static boolean hasFluidType(Fluid fluid) {
+    try {
+      fluid.getFluidType();
+      return true;
+    } catch (RuntimeException e) {
+      return false;
+    }
   }
 
   /** Adds filled variants of all standard tank items to the given consumer */
@@ -329,7 +344,7 @@ public class TankItem extends BlockTooltipItem {
   public static void addFilledVariants(Consumer<ItemStack> output) {
     BuiltInRegistries.FLUID.holders().filter(holder -> {
       Fluid fluid = holder.value();
-      return fluid.isSource(fluid.defaultFluidState()) && !holder.is(TinkerTags.Fluids.HIDE_IN_CREATIVE_TANKS);
+      return fluid.isSource(fluid.defaultFluidState()) && hasFluidType(fluid) && !holder.is(TinkerTags.Fluids.HIDE_IN_CREATIVE_TANKS);
     }).forEachOrdered(holder -> {
       // use an ingot variety for metals
       TankType tank, gauge;
